@@ -1,0 +1,29 @@
+header, footer {
+  background-color: #000;
+}
+
+header section {
+  background-color: #fff;
+}
+
+.reviews div {
+  background-color: grey;
+}
+
+section div a {
+  border-radius: 5px;
+  padding: 5px 10px;
+  display: inline-block;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.guitar-list div {
+  background-color: gainsboro;
+}
