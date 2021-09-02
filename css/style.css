@@ -1,29 +1,30 @@
-header, footer {
-  background-color: #000;
+header,
+footer {
+  background-color: #202020;
+  color: #fff;
 }
 
-header section {
-  background-color: #fff;
+footer {
+  text-align: center;
 }
 
-.reviews div {
-  background-color: grey;
+header a {
+  color: #fff;
 }
 
-section div a {
-  border-radius: 5px;
-  padding: 5px 10px;
-  display: inline-block;
+.cta {
+  background-color: #BB0000;
+  color: #fff;
 }
 
-.red {
-  background-color: red;
+.cta-sale {
+  background-color: #127300;
 }
 
-.green {
-  background-color: green;
+.reviews {
+  background-color: #E8E8E8;
 }
 
-.guitar-list div {
-  background-color: gainsboro;
+.featured--products {
+  background-color: #FBFBFB;
 }
