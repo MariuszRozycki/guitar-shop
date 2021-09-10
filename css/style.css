@@ -64,3 +64,12 @@ header a {
 .reviews__images {
   border-radius: 50%;
 }
+
+/* Contact page */
+
+input, 
+select, 
+textarea {
+  border: 1px solid #C4C4C4;
+  border-radius: 5px;
+}
