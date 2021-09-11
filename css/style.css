@@ -32,6 +32,7 @@ header a {
 .cta {
   background-color: #BB0000;
   color: #fff;
+  text-decoration: none;
 }
 
 .cta-sale {
@@ -72,4 +73,24 @@ select,
 textarea {
   border: 1px solid #C4C4C4;
   border-radius: 5px;
+}
+
+/* Nav */
+
+nav ul {
+  display: flex;
+  padding: 0;
+}
+
+nav ul li {
+  list-style: none;
+
+}
+nav ul li a {
+  text-decoration: none;
+  padding: 0 10px 0 0;
+}
+
+.nav__active {
+  text-decoration: underline;
 }
