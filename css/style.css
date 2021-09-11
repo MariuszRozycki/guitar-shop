@@ -78,19 +78,18 @@ textarea {
 /* Nav */
 
 nav ul {
-  display: flex;
   padding: 0;
 }
 
-nav ul li {
+nav li {
+  display: inline-block;
   list-style: none;
-
 }
-nav ul li a {
+nav a {
   text-decoration: none;
   padding: 0 10px 0 0;
 }
 
-.nav__active {
+.active {
   text-decoration: underline;
 }
