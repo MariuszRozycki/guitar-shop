@@ -25,14 +25,23 @@ footer {
   text-align: center;
 }
 
+header {
+  padding: 0 10px;
+}
+
 header a {
   color: #fff;
 }
+
+
 
 .cta {
   background-color: #BB0000;
   color: #fff;
   text-decoration: none;
+  padding: 10px 100px;
+  border-radius: 5px;
+  display: inline-block;
 }
 
 .cta-sale {
@@ -87,7 +96,7 @@ nav li {
 }
 nav a {
   text-decoration: none;
-  padding: 0 10px 0 0;
+  padding: 0 20px 0 0;
 }
 
 .active {
