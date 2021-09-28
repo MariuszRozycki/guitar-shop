@@ -27,10 +27,17 @@ footer {
 
 header {
   padding: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  margin-left: 25px;
 }
 
 header a {
   color: #fff;
+  text-decoration: none;
 }
 
 
@@ -81,11 +88,33 @@ header a {
   text-align: center;
 }
 
-.selling-points__images {
-  border-radius: 100px;
+.selling-points {
+  display: flex;
+  max-width: 1000px;
+  margin: 50px auto;
 }
 
+.selling-points > * {
+  flex: 1;
+}
+
+.selling-points__images {
+  border-radius: 50px;
+  height: 250px;
+}
+
+.reviews {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.reviews h2 {
+  flex: 100%;
+}
+
+
 .reviews__images {
+  width: 80px;
   border-radius: 50%;
 }
 
