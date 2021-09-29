@@ -21,24 +21,35 @@
     </nav>
   </header>
 
-  <main>
+  <main class="contact">
     <h1>Contact</h1>
     <form method="POST">
-      <label for="name">Full name</label>
-      <input type="text" id="name" name="name">
-      <label for="email">Email</label>
-      <input type="text" id="email" name="Email">
-      <label for="guitar">Guitar</label>
-      <select id="guitar" name="Guitar">
-        <option value="Adirondack Red">Adirondack Red</option>
-        <option value="Adirondack Blue">Adirondack Blue</option>
-        <option value="Adirondack Black">Adirondack Black</option>
-      </select>
-      <input type="checkbox" id="email-update" name="email-updates">
-      <label for="email-update">Sign up for email updates.</label>
-      <label for="message">Message</label>
-      <textarea type="text" id="message" name="message"></textarea>
-      <input type="submit" value="Send Now" class="cta cta-small">
+      <div class="form-wrapper">
+
+        <section class="form__peronal-data">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name">
+          <label for="email">Email</label>
+          <input type="text" id="email" name="Email">
+          <label for="guitar">Guitar</label>
+          <select id="guitar" name="Guitar">
+            <option value="Adirondack Red">Adirondack Red</option>
+            <option value="Adirondack Blue">Adirondack Blue</option>
+            <option value="Adirondack Black">Adirondack Black</option>
+          </select>
+          <div>
+            <input type="checkbox" id="email-update" name="email-updates">
+            <label for="email-update">Sign up for email updates.</label>
+          </div>
+        </section>
+
+        <section class="message">
+          <label for="form__message">Message</label>
+          <textarea type="text" id="message" name="message"></textarea>
+        </section>
+
+      </div>
+      <input type="submit" value="Send Now" class="cta">
     </form>
   </main>
 

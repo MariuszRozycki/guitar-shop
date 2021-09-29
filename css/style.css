@@ -89,33 +89,47 @@ header a {
 }
 
 .selling-points {
-  display: flex;
-  max-width: 1000px;
   margin: 50px auto;
 }
 
-.selling-points > * {
+.selling-points,
+.reviews__content {
+  display: flex;
+  max-width: 1000px;
+}
+
+.selling-points > *,
+.reviews__content > * {
   flex: 1;
 }
 
 .selling-points__images {
   border-radius: 50px;
-  height: 250px;
+  width: 100%;
 }
 
 .reviews {
-  display: flex;
-  flex-wrap: wrap;
+  text-align: center;
+  padding: 50px;
 }
 
-.reviews h2 {
-  flex: 100%;
+.reviews__content {
+  text-align: left;
+  margin: auto;
 }
 
+.reviews__content div {
+  margin: 50px;
+}
+
+.reviews__name {
+  display: block;
+}
 
 .reviews__images {
   width: 80px;
   border-radius: 50%;
+  float: right;
 }
 
 /* Contact page */
@@ -125,6 +139,29 @@ select,
 textarea {
   border: 1px solid #C4C4C4;
   border-radius: 5px;
+  margin: 10px 10px 10px 0;
+  padding: 10px;
+}
+
+textarea {
+  height: 65%;
+}
+
+.contact {
+  max-width: 1000px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.form-wrapper {
+  display: flex;
+  text-align: left;
+}
+
+.form-wrapper > * {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Nav */
@@ -145,3 +182,46 @@ nav a {
 .active {
   text-decoration: underline;
 }
+
+/* adirindack-red page */
+.product-specific {
+  display: flex;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.product-specific figure {
+  margin: 0;
+}
+
+.product-image {
+  width: 100%;
+}
+
+.product-specific > * {
+  flex: 1;
+}
+
+.product-image_thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.product-specific__details {
+  padding: 0 20px;
+}
+
+.product-specific__price {
+  font-size: 1.5em;
+}
+
+.product-specific__details a {
+  display: block;
+  text-align: center;
+  width: 120px;
+}
+
+
+
+
