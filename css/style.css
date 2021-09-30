@@ -7,6 +7,10 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  margin: 0px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 h1,
@@ -23,6 +27,7 @@ footer {
 
 footer {
   text-align: center;
+  padding: 20px;
 }
 
 header {
@@ -50,6 +55,7 @@ header a {
   border-radius: 5px;
   display: inline-block;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .cta-sale {
@@ -57,16 +63,43 @@ header a {
 }
 
 .cta-small {
-  padding: 8px 30px;
-  font-size: 0.5em;
+  padding: 8px 20px;
+  font-size: 0.9em;
+  grid-row: 2/4;
+  grid-column: 2;
+  min-width: 50px;
+  text-align: center;
 }
 
 .reviews {
   background-color: #E8E8E8;
 }
 
-.featured__products {
+.products {
   background-color: #FBFBFB;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  font-size: 0.8em;
+}
+
+.products img {
+  grid-column: -1/1;
+}
+
+.products h2,
+.products h3, 
+.products p {
+  grid-column: 1;
+  margin: 5px 5px 0 0;
+}
+
+.product--sale {
+  display: flex;
+}
+
+.old-price {
+  text-decoration: line-through;
 }
 
 /* Home Peage */
@@ -132,8 +165,25 @@ header a {
   float: right;
 }
 
-/* Contact page */
+.featured {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1000px;
+  margin: 50px auto;
+  grid-gap: 10px;
+}
 
+.featured h2 {
+  text-align: center;
+  grid-column: -1/1;
+}
+
+.featured img {
+  width: 100%;
+}
+
+
+/* Contact page */
 input, 
 select, 
 textarea {
@@ -222,6 +272,23 @@ nav a {
   width: 120px;
 }
 
+/* guitars page */
+.guitars {
+  max-width: 1000px;
+  margin: 50px auto;
+}
 
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 20px;
+}
 
+.product-list h2 {
+  font-family: 'Tahoma', 'sans-serif';
+}
 
+.products img {
+  width: 100%;
+}
+ 
