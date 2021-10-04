@@ -17,6 +17,7 @@ h1,
 h2,
 .logo {
   font-family: 'Boots And Spurs', 'Tahoma';
+  /* text-align: center; */
 }
 
 header,
@@ -31,31 +32,62 @@ footer {
 }
 
 header {
-  padding: 0 10px;
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 nav {
   margin-left: 25px;
+  display: none;
+  position: fixed;
+  top: 45px;
+  z-index: 1000;
+  right: 0px;
+  background: #202020;
+}
+
+nav ul {
+  padding: 0px;
+}
+
+nav li {
+  display: block;
+  padding: 20px 30px;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+#hamburger-menu:checked ~ nav {
+  display: block;
+}
+
+/* links */
+a {
+  text-decoration: none;
 }
 
 header a {
   color: #fff;
-  text-decoration: none;
+  padding: 10px;
 }
 
-
+.active {
+  text-decoration: underline;
+}
 
 .cta {
-  background-color: #BB0000;
+  background-color: #bb0000;
   color: #fff;
-  text-decoration: none;
-  padding: 10px 80px;
-  border-radius: 5px;
-  display: inline-block;
+  font-size: 1em;
   text-transform: uppercase;
-  text-align: center;
+  border-radius: 5px;
+}
+
+.cta-large {
+  padding: 10px 40px;
 }
 
 .cta-sale {
@@ -64,11 +96,12 @@ header a {
 
 .cta-small {
   padding: 8px 20px;
-  font-size: 0.9em;
-  grid-row: 2/4;
+  font-size: 0.8em;
   grid-column: 2;
-  min-width: 50px;
+  grid-row: 2;
+  min-width: 51.2px;
   text-align: center;
+  margin-top: 5px;
 }
 
 .reviews {
@@ -107,7 +140,7 @@ header a {
 .welcome {
   background-image: url('../images/home-header.jpg');
   min-height: 70vh;
-  background-position-x: right;
+  background-position-x: center;
   background-position-y: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -116,9 +149,11 @@ header a {
 
 .welcome__content {
   position: absolute;
-  top: 100px;
-  left: 20px;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
+  min-width: 210px;
 }
 
 .selling-points {
@@ -129,11 +164,16 @@ header a {
 .reviews__content {
   display: flex;
   max-width: 1000px;
+  flex-direction: column;
 }
 
 .selling-points > *,
 .reviews__content > * {
   flex: 1;
+}
+
+.selling-points h2 {
+  text-align: center;
 }
 
 .selling-points__images {
@@ -152,7 +192,7 @@ header a {
 }
 
 .reviews__content div {
-  margin: 50px;
+  margin: 20px;
 }
 
 .reviews__name {
@@ -167,7 +207,7 @@ header a {
 
 .featured {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
   max-width: 1000px;
   margin: 50px auto;
   grid-gap: 10px;
@@ -195,6 +235,7 @@ textarea {
 
 textarea {
   height: 65%;
+  min-height: 100px;
 }
 
 .contact {
@@ -206,6 +247,7 @@ textarea {
 .form-wrapper {
   display: flex;
   text-align: left;
+  flex-direction: column;
 }
 
 .form-wrapper > * {
@@ -214,30 +256,13 @@ textarea {
   flex-direction: column;
 }
 
-/* Nav */
-
-nav ul {
-  padding: 0;
-}
-
-nav li {
-  display: inline-block;
-  list-style: none;
-}
-nav a {
-  text-decoration: none;
-  padding: 0 20px 0 0;
-}
-
-.active {
-  text-decoration: underline;
-}
 
 /* adirindack-red page */
 .product-specific {
   display: flex;
   max-width: 1000px;
-  margin: 50px auto;
+  margin-bottom: 50px;
+  flex-direction: column;
 }
 
 .product-specific figure {
@@ -270,6 +295,7 @@ nav a {
   display: block;
   text-align: center;
   width: 120px;
+  margin: auto;
 }
 
 /* guitars page */
@@ -280,7 +306,7 @@ nav a {
 
 .product-list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   grid-gap: 20px;
 }
 
@@ -291,4 +317,89 @@ nav a {
 .products img {
   width: 100%;
 }
- 
+
+@media (min-width: 400px) {
+  .product-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 600px) {
+  .featured {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .selling-points,
+  .reviews__content {
+  flex-direction: row;
+  }
+
+  .selling-points h2 {
+    text-align: left;
+  }
+
+  header {
+    justify-content: start;
+  }
+
+  nav {
+    display: block;
+    position: static;
+  }
+
+  nav li {
+    display: inline-block;
+    padding: 0;
+  }
+
+  header label {
+    display: none;
+  }
+
+  .product-specific {
+    flex-direction: column-reverse;
+  }
+
+  .product-specific__details {
+    margin-bottom: 50px;
+  }
+
+  .form-wrapper {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 800px) {
+  .featured {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .reviews__content div {
+    margin: 50px;
+  }
+
+  .welcome {
+    background-position-x: right;
+  }
+
+  .welcome__content {
+    top: 100px;
+    left: 20px;
+    transform: none;
+  }
+
+  .cta-large {
+    padding: 10px 80px;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .product-specific {
+    flex-direction: row;
+    margin: 50px auto;
+  }
+}
+
+
