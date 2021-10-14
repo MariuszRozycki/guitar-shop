@@ -85,6 +85,26 @@ header a {
   font-size: 1em;
   text-transform: uppercase;
   border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.cta::after {
+  display: block;
+  content: '';
+  width: 10px;
+  height: 100px;
+  position: absolute;
+  top: -100%;
+  left: -30px;
+  background-color: rgba(255, 255, 255, .5);
+  transform: rotate(45deg);
+  transition: left ease-in-out .5s;
+}
+
+.cta:hover::after {
+  left: 110%;
 }
 
 .cta-large {
