@@ -1,0 +1,79 @@
+/* Home Peage */
+.welcome {
+  background: url('../images/home-header.jpg') center bottom no-repeat;
+  min-height: 70vh;
+  background-size: cover;
+  position: relative;
+}
+
+.welcome__content {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  min-width: 210px;
+}
+
+.selling-points {
+  margin: 50px auto;
+}
+
+.selling-points,
+.reviews__content {
+  display: flex;
+  max-width: 1000px;
+  flex-direction: column;
+}
+
+.selling-points > *,
+.reviews__content > * {
+  flex: 1;
+}
+
+.selling-points h2 {
+  text-align: center;
+}
+
+.selling-points__images {
+  border-radius: 50px;
+  width: 100%;
+}
+
+.reviews {
+  text-align: center;
+  padding: 50px;
+  background-color: #E8E8E8;
+}
+
+.reviews__content {
+  text-align: left;
+  margin: auto;
+}
+
+.reviews__content div {
+  margin: 20px;
+}
+
+.reviews__name {
+  display: block;
+}
+
+.reviews__images {
+  width: 80px;
+  border-radius: 50%;
+  float: right;
+}
+
+.featured {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 1000px;
+  margin: 50px auto;
+  gap: 10px;
+}
+
+.featured h2 {
+  text-align: center;
+  grid-column: -1/1;
+}

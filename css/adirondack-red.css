@@ -1,0 +1,40 @@
+/* adirindack-red page */
+.product-specific {
+  display: flex;
+  max-width: 1000px;
+  margin-bottom: 50px;
+  flex-direction: column;
+}
+
+.product-specific figure {
+  margin: 0;
+}
+
+.product-image {
+  width: 100%;
+}
+
+.product-specific > * {
+  flex: 1;
+}
+
+.product-image_thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.product-specific__details {
+  padding: 0 20px;
+}
+
+.product-specific__price {
+  font-size: 1.5em;
+}
+
+.product-specific__details a {
+  display: block;
+  text-align: center;
+  width: 120px;
+  margin: auto;
+}

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('imports/links.css');
+@import url('imports/variables.css');
 
 @font-face {
   font-family: 'Boots And Spurs';
@@ -6,7 +8,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--text-paragraph), sans-serif;
   min-height: 100vh;
   margin: 0px;
   padding: 5px;
@@ -17,13 +19,13 @@ body {
 h1,
 h2,
 .logo {
-  font-family: 'Boots And Spurs', 'Tahoma';
+  font-family: var(--text-heading), 'Tahoma';
   /* text-align: center; */
 }
 
 header,
 footer {
-  background-color: #202020;
+  background-color: var(--color-header-footer);
   color: #fff;
 }
 
@@ -45,7 +47,7 @@ nav {
   top: 45px;
   z-index: 1000;
   right: 5px;
-  background: #202020;
+  background: var(--color-header-footer);
 }
 
 nav ul {
@@ -65,68 +67,8 @@ nav li {
   display: block;
 }
 
-/* links */
-a {
-  text-decoration: none;
-}
-
-header a {
-  color: #fff;
-  padding: 10px;
-}
-
-.active {
-  text-decoration: underline;
-}
-
-.cta {
-  background-color: #bb0000;
-  color: #fff;
-  font-size: 1em;
-  text-transform: uppercase;
-  border-radius: 5px;
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-}
-
-.cta::after {
-  display: block;
-  content: '';
-  width: 10px;
-  height: 100px;
-  position: absolute;
-  top: -100%;
-  left: -30px;
-  background-color: rgba(255, 255, 255, .5);
-  transform: rotate(45deg);
-  transition: left ease-in-out .5s;
-}
-
-.cta:hover::after {
-  left: 110%;
-}
-
-.cta-large {
-  padding: 10px 40px;
-}
-
-.cta-sale {
-  background-color: #127300;
-}
-
-.cta-small {
-  padding: 8px 20px;
-  font-size: 0.8em;
-  grid-column: 2;
-  grid-row: 2;
-  min-width: 51.2px;
-  text-align: center;
-  margin-top: 5px;
-}
-
-.reviews {
-  background-color: #E8E8E8;
+img {
+  width: 100%;
 }
 
 .products {
@@ -155,282 +97,3 @@ header a {
 .old-price {
   text-decoration: line-through;
 }
-
-/* Home Peage */
-
-.welcome {
-  background-image: url('../images/home-header.jpg');
-  min-height: 70vh;
-  background-position-x: center;
-  background-position-y: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.welcome__content {
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  min-width: 210px;
-}
-
-.selling-points {
-  margin: 50px auto;
-}
-
-.selling-points,
-.reviews__content {
-  display: flex;
-  max-width: 1000px;
-  flex-direction: column;
-}
-
-.selling-points > *,
-.reviews__content > * {
-  flex: 1;
-}
-
-.selling-points h2 {
-  text-align: center;
-}
-
-.selling-points__images {
-  border-radius: 50px;
-  width: 100%;
-}
-
-.reviews {
-  text-align: center;
-  padding: 50px;
-}
-
-.reviews__content {
-  text-align: left;
-  margin: auto;
-}
-
-.reviews__content div {
-  margin: 20px;
-}
-
-.reviews__name {
-  display: block;
-}
-
-.reviews__images {
-  width: 80px;
-  border-radius: 50%;
-  float: right;
-}
-
-.featured {
-  display: grid;
-  grid-template-columns: 1fr;
-  max-width: 1000px;
-  margin: 50px auto;
-  grid-gap: 10px;
-}
-
-.featured h2 {
-  text-align: center;
-  grid-column: -1/1;
-}
-
-.featured img {
-  width: 100%;
-}
-
-
-/* Contact page */
-input, 
-select, 
-textarea {
-  border: 1px solid #C4C4C4;
-  border-radius: 5px;
-  margin: 10px 10px 10px 0;
-  padding: 10px;
-}
-
-textarea {
-  height: 65%;
-  min-height: 100px;
-}
-
-.contact {
-  max-width: 1000px;
-  margin: 50px auto;
-  text-align: center;
-}
-
-.form-wrapper {
-  display: flex;
-  text-align: left;
-  flex-direction: column;
-}
-
-.form-wrapper > * {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-
-/* adirindack-red page */
-.product-specific {
-  display: flex;
-  max-width: 1000px;
-  margin-bottom: 50px;
-  flex-direction: column;
-}
-
-.product-specific figure {
-  margin: 0;
-}
-
-.product-image {
-  width: 100%;
-}
-
-.product-specific > * {
-  flex: 1;
-}
-
-.product-image_thumbnails {
-  display: flex;
-  gap: 10px;
-  margin-top: 5px;
-}
-
-.product-specific__details {
-  padding: 0 20px;
-}
-
-.product-specific__price {
-  font-size: 1.5em;
-}
-
-.product-specific__details a {
-  display: block;
-  text-align: center;
-  width: 120px;
-  margin: auto;
-}
-
-/* guitars page */
-.guitars {
-  max-width: 1000px;
-  margin: 50px auto;
-}
-
-.guitars .products {
-  animation: show-guitars 1s forwards;
-  opacity: 0;
-}
-
-@keyframes show-guitars {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-}
-
-.product-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 20px;
-}
-
-.product-list h2 {
-  font-family: 'Tahoma', 'sans-serif';
-}
-
-.products img {
-  width: 100%;
-}
-
-@media (min-width: 400px) {
-  .product-list {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: 600px) {
-  .featured {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .selling-points,
-  .reviews__content {
-  flex-direction: row;
-  }
-
-  .selling-points h2 {
-    text-align: left;
-  }
-
-  header {
-    justify-content: start;
-  }
-
-  nav {
-    display: block;
-    position: static;
-  }
-
-  nav li {
-    display: inline-block;
-    padding: 0;
-  }
-
-  header label {
-    display: none;
-  }
-
-  .product-specific {
-    flex-direction: column-reverse;
-  }
-
-  .product-specific__details {
-    margin-bottom: 50px;
-  }
-
-  .form-wrapper {
-    flex-direction: row;
-  }
-}
-
-@media (min-width: 800px) {
-  .featured {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .reviews__content div {
-    margin: 50px;
-  }
-
-  .welcome {
-    background-position-x: right;
-  }
-
-  .welcome__content {
-    top: 100px;
-    left: 20px;
-    transform: none;
-  }
-
-  .cta-large {
-    padding: 10px 80px;
-  }
-
-  .product-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .product-specific {
-    flex-direction: row;
-    margin: 50px auto;
-  }
-}
-
-

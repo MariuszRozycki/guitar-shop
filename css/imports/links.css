@@ -1,0 +1,59 @@
+/* links */
+a {
+  text-decoration: none;
+}
+
+header a {
+  color: #fff;
+  padding: 10px;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.cta {
+  background-color: #bb0000;
+  color: #fff;
+  font-size: 1em;
+  text-transform: uppercase;
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.cta::after {
+  display: block;
+  content: '';
+  width: 10px;
+  height: 100px;
+  position: absolute;
+  top: -100%;
+  left: -30px;
+  background-color: rgba(255, 255, 255, .5);
+  transform: rotate(45deg);
+  transition: left ease-in-out .5s;
+}
+
+.cta:hover::after {
+  left: 110%;
+}
+
+.cta-large {
+  padding: 10px 40px;
+}
+
+.cta-sale {
+  background-color: #127300;
+}
+
+.cta-small {
+  padding: 8px 20px;
+  font-size: 0.8em;
+  grid-column: 2;
+  grid-row: 2;
+  min-width: 51.2px;
+  text-align: center;
+  margin-top: 5px;
+}
