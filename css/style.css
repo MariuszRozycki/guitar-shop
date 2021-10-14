@@ -11,7 +11,7 @@ body {
   font-family: var(--text-paragraph), sans-serif;
   min-height: 100vh;
   margin: 0px;
-  padding: 5px;
+  padding: 0 5px;
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
