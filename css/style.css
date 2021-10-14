@@ -325,6 +325,16 @@ textarea {
   margin: 50px auto;
 }
 
+.guitars .products {
+  animation: show-guitars 1s forwards;
+  opacity: 0;
+}
+
+@keyframes show-guitars {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
 .product-list {
   display: grid;
   grid-template-columns: 1fr;
