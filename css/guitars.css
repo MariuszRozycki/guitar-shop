@@ -4,13 +4,29 @@
   margin: 50px auto;
 }
 
-.guitars .products {
-  animation: show-guitars 1s forwards;
+.guitars .product-list {
+  animation: show-guitars 3s forwards;
   opacity: 0;
+}
+
+.guitars h1 {
+  animation: show-h1 1s forwards;  
+  transform: translateY(2000px);
+  overflow: hidden;
+}
+
+.products div {
+  grid-column: -1/1;
+}
+
+@keyframes show-h1 {
+  0% {transform: translateY(2000px);}
+  100% {transform: translateY(0px);}
 }
 
 @keyframes show-guitars {
   0% {opacity: 0;}
+  50%{opacity: 0.5;}
   100% {opacity: 1;}
 }
 
@@ -23,3 +39,4 @@
 .product-list h2 {
   font-family: 'Tahoma', 'sans-serif';
 }
+
